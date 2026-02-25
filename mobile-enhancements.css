@@ -1,0 +1,110 @@
+/* Banner Mobile - AJUSTADO PARA NÃO CORTAR */
+.banner-pascoa {
+    height: auto !important; /* Altura automática para manter proporção */
+    min-height: auto !important;
+    margin-bottom: 1rem !important;
+    border-radius: 10px !important;
+    overflow: visible !important; /* Permite ver tudo */
+    display: block !important;
+}
+
+.banner-pascoa img {
+    width: 100% !important;
+    height: auto !important; /* Altura automática */
+    object-fit: contain !important; /* Garante que a imagem caiba inteira */
+    display: block;
+    max-height: none !important;
+}
+
+/* Ajuste para 2 colunas no mobile */
+@media (max-width: 768px) {
+    .banner-pascoa {
+        margin-bottom: 1rem;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 10px; /* Espaçamento menor entre os produtos */
+        align-items: stretch; /* Garante que os cards tenham a mesma altura na linha */
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 100%; /* Força altura total */
+    }
+
+    .product-image {
+        height: 140px; /* Altura reduzida da imagem para equilibrar */
+    }
+
+    .product-info {
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Ocupa o espaço restante */
+    }
+
+    .product-name {
+        font-size: 0.8rem; /* Fonte levemente menor */
+        height: auto; /* Altura automática para caber tudo */
+        min-height: 35px; /* Mínimo para alinhar produtos com nomes curtos */
+        overflow: visible; /* Mostrar todo o texto */
+        text-overflow: clip;
+        display: block;
+        -webkit-line-clamp: unset; /* Remove limite de linhas */
+        margin-bottom: 0.5rem;
+        line-height: 1.3; /* Espaçamento entre linhas melhor */
+    }
+
+    .rating {
+        font-size: 0.7rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .product-price {
+        margin-top: auto; /* Empurra o preço para o fundo do container de info */
+        padding-top: 0.5rem;
+    }
+
+    .original-price {
+        font-size: 0.75rem;
+    }
+
+    .final-price {
+        font-size: 1rem;
+    }
+
+    .installments {
+        font-size: 0.65rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .add-to-cart-btn {
+        padding: 0.6rem;
+        font-size: 0.75rem;
+        margin-top: auto; /* Garante botão alinhado no final */
+    }
+
+    /* Promo Section Mobile Adjustments */
+    .promo-header {
+        flex-direction: column !important;
+        gap: 10px !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .promo-header h2 {
+        font-size: 1.2rem !important;
+        justify-content: center !important;
+        width: 100%;
+    }
+
+    /* Ajuste para caber o texto "SOMENTE HOJE" */
+    .badge-somente-hoje {
+        font-size: 0.65rem !important;
+        padding: 4px 8px 4px 10px !important;
+    }
+}

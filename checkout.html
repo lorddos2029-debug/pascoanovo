@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Cacau Show</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script 
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js" 
+      data-utmify-prevent-xcod-sck 
+      data-utmify-prevent-subids 
+      async 
+      defer 
+    ></script>
+    <script>
+      window.pixelId = "6900c23507be5c15f8571297"; 
+      var a = document.createElement("script"); 
+      a.setAttribute("async", ""); 
+      a.setAttribute("defer", ""); 
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js"); 
+      document.head.appendChild(a); 
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1646675120106485');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1646675120106485&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <header class="checkout-header">
+        <div class="container-header">
+            <div class="logo">
+                <a href="store.html"><img src="cacau-show-logo-1-1.png" alt="Cacau Show"></a>
+            </div>
+            <div class="checkout-steps">
+                <div class="step-chk completed">Carrinho</div>
+                <div class="separator"></div>
+                <div class="step-chk active">Identificação & Pagamento</div>
+                <div class="separator"></div>
+                <div class="step-chk">Confirmação</div>
+            </div>
+            <div class="secure-badge">
+                <i class="fas fa-lock"></i> Ambiente Seguro
+            </div>
+        </div>
+    </header>
+
+    <main class="checkout-main">
+        <div class="container-checkout">
+            <div class="checkout-grid">
+                
+                <!-- Left Column: Forms -->
+                <div class="checkout-forms">
+                    
+                    <!-- Identification -->
+                    <section class="checkout-box" id="personal-box">
+                        <h2><i class="far fa-user"></i> Dados Pessoais</h2>
+                        <form id="checkout-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input id="email" type="email" placeholder="seu@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row two-cols">
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <input id="first-name" type="text" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Sobrenome</label>
+                                    <input id="last-name" type="text" placeholder="Sobrenome" required>
+                                </div>
+                            </div>
+                            <div class="form-row two-cols">
+                                <div class="form-group">
+                                    <label>CPF</label>
+                                    <input id="cpf" type="text" placeholder="000.000.000-00" inputmode="numeric" pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$|^\d{11}$" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Celular</label>
+                                    <input id="phone" type="text" placeholder="(00) 00000-0000" inputmode="tel" pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$|^\d{10,11}$" required>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" id="to-address-btn" class="step-btn">Continuar para Frete</button>
+                    </section>
+
+                    <!-- Address & Shipping -->
+                    <section class="checkout-box hidden" id="address-box">
+                        <h2><i class="far fa-map"></i> Endereço e Frete</h2>
+                        <div class="form-row two-cols">
+                            <div class="form-group">
+                                <label>CEP</label>
+                                <input id="cep" type="text" placeholder="00000-000" inputmode="numeric" pattern="^\d{5}-?\d{3}$" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Estado</label>
+                                <input id="state" type="text" placeholder="UF" required>
+                            </div>
+                        </div>
+                        <div class="form-row two-cols">
+                            <div class="form-group">
+                                <label>Cidade</label>
+                                <input id="city" type="text" placeholder="Cidade" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Bairro</label>
+                                <input id="neighborhood" type="text" placeholder="Bairro" required>
+                            </div>
+                        </div>
+                        <div class="form-row two-cols">
+                            <div class="form-group">
+                                <label>Endereço</label>
+                                <input id="street" type="text" placeholder="Rua/Av." required>
+                            </div>
+                            <div class="form-group">
+                                <label>Número</label>
+                                <input id="number" type="text" placeholder="Número" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Complemento</label>
+                                <input id="complement" type="text" placeholder="Apartamento, bloco, referência">
+                            </div>
+                        </div>
+                        <div class="payment-options hidden" id="shipping-options">
+                            <div class="payment-option" data-shipping="27.95">
+                                <div class="radio-custom"></div>
+                                <div class="option-content">
+                                    <div class="option-header">
+                                        <span>Frete Rápido</span>
+                                        <span>R$ 27,95</span>
+                                    </div>
+                                    <p>Entrega em 2–3 dias úteis</p>
+                                </div>
+                            </div>
+                            <div class="payment-option" data-shipping="17.94">
+                                <div class="radio-custom"></div>
+                                <div class="option-content">
+                                    <div class="option-header">
+                                        <span>Frete Econômico</span>
+                                        <span>R$ 17,94</span>
+                                    </div>
+                                    <p>Entrega em 4–6 dias úteis</p>
+                                </div>
+                            </div>
+                            <div class="payment-option active" data-shipping="0">
+                                <div class="radio-custom selected"></div>
+                                <div class="option-content">
+                                    <div class="option-header">
+                                        <span>Frete Grátis</span>
+                                        <span>R$ 0,00</span>
+                                    </div>
+                                    <p>Entrega em 10–15 dias úteis</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="to-payment-btn" class="step-btn hidden">Ir para Pagamento</button>
+                    </section>
+
+                    <!-- Payment -->
+                    <section class="checkout-box payment-section hidden" id="payment-box">
+                        <h2><i class="far fa-credit-card"></i> Pagamento</h2>
+                        <div class="payment-options">
+                            <div class="payment-option active">
+                                <div class="radio-custom selected"></div>
+                                <div class="option-content">
+                                    <div class="option-header">
+                                        <span class="pix-label"><i class="fas fa-qrcode"></i> PIX</span>
+                                    </div>
+                                    <p>Aprovação imediata. Pague com o app do seu banco.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Right Column: Summary -->
+                <div class="order-summary-sidebar">
+                    <div class="checkout-box summary-box">
+                        <h2>Resumo do Pedido</h2>
+                        <div class="summary-items" id="summary-items">
+                            <!-- Items injected via JS -->
+                        </div>
+                        <div class="summary-totals">
+                            <div class="row">
+                                <span>Subtotal</span>
+                                <span id="chk-subtotal">R$ 0,00</span>
+                            </div>
+                            <div class="row">
+                                <span>Frete</span>
+                                <span id="chk-shipping">R$ 0,00</span>
+                            </div>
+                            <div class="row total">
+                                <span>Total</span>
+                                <span id="chk-total">R$ 0,00</span>
+                            </div>
+                        </div>
+                        <button type="submit" form="checkout-form" class="finalize-btn" id="finalize-btn" disabled>FINALIZAR COMPRA</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- PIX Modal -->
+    <div id="pix-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Pague com PIX</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="timer">
+                    Seu pedido expira em: <span id="countdown">10:00</span>
+                </div>
+                <div id="pix-loading" class="pix-loading">
+                    <div class="spinner"></div>
+                    <p>Gerando PIX, aguarde...</p>
+                </div>
+                <div id="pix-error" class="pix-error hidden">Falha ao gerar PIX. Tente novamente.</div>
+                <div class="qr-code-container">
+                    <img src="" alt="QR Code PIX">
+                </div>
+                <div class="pix-code-box">
+                    <p>Copia e Cola:</p>
+                    <input type="text" value="" readonly id="pix-code-input">
+                    <button class="copy-pix-btn"><i class="far fa-copy"></i> Copiar Código</button>
+                </div>
+                <button class="confirm-payment-btn" id="confirm-payment">JÁ PAGUEI</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content success">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>Pedido Confirmado!</h2>
+            <p>Seu pagamento foi recebido com sucesso.</p>
+            <p class="order-id">Pedido #CS-829301</p>
+            <p>Você receberá um e-mail com os detalhes da entrega.</p>
+            <a href="store.html" class="back-home-btn">Voltar para Loja</a>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

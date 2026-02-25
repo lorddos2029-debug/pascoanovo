@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Cacau Show - Descubra seu Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script 
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js" 
+      data-utmify-prevent-xcod-sck 
+      data-utmify-prevent-subids 
+      async 
+      defer 
+    ></script>
+    <script>
+      window.pixelId = "6900c23507be5c15f8571297"; 
+      var a = document.createElement("script"); 
+      a.setAttribute("async", ""); 
+      a.setAttribute("defer", ""); 
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js"); 
+      document.head.appendChild(a); 
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1646675120106485');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1646675120106485&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <header>
+        <div class="header-content">
+            <button class="menu-icon"><i class="fas fa-bars"></i></button>
+            <div class="logo-container">
+                <img src="cacau-show-logo-1-1.png" alt="Cacau Show Logo" class="logo">
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section active">
+                <div class="promo-title">Promoção de Páscoa Cacau Show 2026</div>
+                <h1>Responda ao nosso questionário agora e garanta até 95% de desconto em chocolates.</h1>
+                <p>Responda a perguntas rápidas sobre a Páscoa Cacau Show e receba uma surpresa especial!</p>
+                <div class="active-users">
+                    <span class="pulse">●</span> <span id="user-count">200</span> pessoas estão respondendo agora
+                </div>
+                <button id="start-btn" class="cta-button pulse-btn">Começar Quiz</button>
+            </section>
+
+            <!-- Quiz Section -->
+            <section id="quiz" class="quiz-section hidden">
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <span class="progress-text">Pergunta <span id="current-q">1</span> de <span id="total-q">4</span></span>
+                </div>
+                
+                <div class="question-container">
+                    <div class="question-media">
+                        <img id="question-image" alt="Imagem da pergunta" />
+                    </div>
+                    <h2 id="question-text">Pergunta aqui</h2>
+                    <div id="options-container" class="options-grid">
+                        <!-- Options will be injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <section id="loading" class="loading-section hidden">
+                <div class="spinner"></div>
+                <h2>Analisando suas respostas...</h2>
+                <div class="validation-steps">
+                    <p class="step" id="step1">
+                        <span class="icon-container"><i class="far fa-circle"></i></span>
+                        <span class="text-container">Verificando disponibilidade de estoque...</span>
+                    </p>
+                    <p class="step" id="step2">
+                        <span class="icon-container"><i class="far fa-circle"></i></span>
+                        <span class="text-container">Confirmando elegibilidade da promoção...</span>
+                    </p>
+                    <p class="step" id="step3">
+                        <span class="icon-container"><i class="far fa-circle"></i></span>
+                        <span class="text-container">Gerando seu cupom de desconto...</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Result Section -->
+            <section id="result" class="result-section hidden">
+                <h2>Parabéns!</h2>
+                <p>Você desbloqueou uma oferta exclusiva:</p>
+                
+                <div class="offer-card">
+                    <h3>95% DE DESCONTO</h3>
+                    <p>Você ganhou 95% de desconto em produtos selecionados da Cacau Show.</p>
+                    <p>Clique no botão abaixo e resgate já!</p>
+                </div>
+
+                <a href="store.html" class="cta-button primary pulse-btn">RESGATAR DESCONTO AGORA</a>
+                <p class="disclaimer">*Oferta válida por tempo limitado.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Política de Privacidade</a> | 
+            <a href="#">Fale Conosco</a>
+        </div>
+        <div class="footer-security">
+            <i class="fas fa-lock"></i> Site Seguro e Verificado
+        </div>
+        <p>&copy; 2026 Cacau Show. Todos os direitos reservados.</p>
+        <p class="social-proof">Milhares de pessoas já participaram e garantiram seus benefícios.</p>
+        
+        <!-- Fake Reviews Section -->
+        <div class="reviews-section">
+            <h3>O que estão dizendo</h3>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <strong>Mariana Costa</strong>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Gente, funciona mesmo! Peguei meu ovo LaCreme e foi super rápido. Amei!"</p>
+                <span class="time-ago">Há 2 min</span>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <strong>Ricardo Silva</strong>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Melhor promoção de Páscoa! O quiz acertou em cheio meu gosto por chocolate amargo."</p>
+                <span class="time-ago">Há 5 min</span>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <strong>Fernanda Lima</strong>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Já garanti o presente do meu namorado. Obrigada Cacau Show!"</p>
+                <span class="time-ago">Há 12 min</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
